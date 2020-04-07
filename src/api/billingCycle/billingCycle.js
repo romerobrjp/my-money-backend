@@ -17,7 +17,7 @@ const billingCycleSchema = new mongoose.Schema({
   month: { type: Number, require: true, min: 1, max: 12 },
   year: { type: Number, require: true, min: 1970, max: 2100 },
   credits: [creditSchema],
-  debits: [debtSchema]
+  debts: [debtSchema]
 })
 
 module.exports = restful.model('BillingCycle', billingCycleSchema)
