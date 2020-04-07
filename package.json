@@ -1,8 +1,8 @@
 {
   "name": "my-money-backend",
-  "version": "beta",
+  "version": "0.0.1",
   "description": "First real world application with Node + React + Redux",
-  "main": "source/loader.js",
+  "main": "src/loader.js",
   "scripts": {
     "dev": "nodemon",
     "production": "pm2 start src/loader.js --name my-money-backend"
