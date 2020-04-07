@@ -10,3 +10,5 @@ server.use(bodyParser.json())
 server.listen(SERVER_PORT, function() {
   console.log(`My Money App API running on port ${SERVER_PORT}`)
 })
+
+module.exports = server
