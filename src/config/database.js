@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
 mongoose.Promise = global.Promise // forces to use the mongoose to use the Node global Promise API
 
-module.exports = mongoose.connect('mongodb://localhost/mymoney')
+module.exports = mongoose.connect('mongodb://localhost/mymoney', { useNewUrlParser: true })
 
 mongoose.Error.messages.general.required = "'{PATH}' is mandatory."
 mongoose.Error.messages.Number.min = "'{VALUE}' is less than the minimum threshold of '{MIN}'."
