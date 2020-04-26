@@ -26,22 +26,22 @@ BillingCycle.route('summary', (req, res, next) => {
     {
       $group: { 
         _id: null,
-        credit_total: { $sum: "$credit" },
-        debt_total: { $sum: "$debt" },
+        credit: { $sum: "$credit" },
+        debt: { $sum: "$debt" },
       }
     },
     {
       $project: {
         _id: 0,
-        credit_total: 1,
-        debt_total: 1
+        credit: 1,
+        debt: 1
       }
     }],
     (error, result) => {
       if (!!error) {
         res.status(500).json({ errors: [error] })
       } else {
-        res.json(result[0] || { credit_total: 0, debt_total: 0 })
+        res.json(result[0] || { credit: 0, debt: 0 })
       }
     }
   )
